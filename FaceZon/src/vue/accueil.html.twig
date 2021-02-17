@@ -5,8 +5,19 @@
 
 {% block contenu %}
 
+{% if form.valide is defined %}
+    {% if form.valide == true %}
+<h1>Article bien écrit.</h1>
+    {% endif %}
+{% else %}
 
-<h1>Bienvenue sur FaceZon </h1>
+<form action="index.php?page=inscrire"method="post"enctype="application/x-www-form-urlencoded">
+    <label for="inputTitre" class="sr-only">Titre:</label>
+    <input type="inputTitre" id="inputTitre" name="inputTitre" class="form-control" placeholder="Titre" required>
+    <label for="inputCTitre" class="sr-only">Contenu Titre:</label>
+    <input type="inputCTitre" id="inputCTitre" name="inputCTitre" class="form-control" placeholder="Contenu Titre" required>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" name="btInscrire">S'inscrire</button>
+</form>
 
-
+{% endif %}
 {% endblock %}
