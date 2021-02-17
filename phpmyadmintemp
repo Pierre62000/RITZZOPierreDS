@@ -1,0 +1,4 @@
+rm /root/phpMyAdmin-5.0.1-all-languages.tar.gz 
+ rm -R /usr/share/phpmyadmin 
+ mv /root/phpMyAdmin-* /usr/share/phpmyadmin 
+ rm /root/phpMyAdmin-*

@@ -1,0 +1,4 @@
+cd /var/www/html/SYMFONY-8078/public/ 
+ composer create-project symfony/website-skeleton projet1 
+ composer require --dev symfony/profiler-pack 
+ npx create-react-app reactprojet
